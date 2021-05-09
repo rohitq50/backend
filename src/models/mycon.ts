@@ -1,4 +1,4 @@
-var mysql = require('mysql');
+import mysql from 'mysql';
 var con = mysql.createConnection({
 	host: "localhost",
 	user: "root",

@@ -1,18 +1,7 @@
-require('dotenv').config()
+"use strict";
+exports.__esModule = true;
+require('dotenv').config();
 // config() will read your .env file, parse the contents, assign it to process.env.
-// export default {
-//   port: process.env.PORT,
-//   databaseURL: process.env.DATABASE_URI,
-//   paypal: {
-//     publicKey: process.env.PAYPAL_PUBLIC_KEY,
-//     secretKey: process.env.PAYPAL_SECRET_KEY,
-//   },
-//   paypal: {
-//     publicKey: process.env.PAYPAL_PUBLIC_KEY,
-//     secretKey: process.env.PAYPAL_SECRET_KEY,
-//   },
-//   mailchimp: {
-//     apiKey: process.env.MAILCHIMP_API_KEY,
-//     sender: process.env.MAILCHIMP_SENDER,
-//   }
-// }
+exports["default"] = {
+    port: process.env.PORT
+};
