@@ -1,4 +1,20 @@
 import express from 'express';
+const router = express.Router();
+import helloDb from '../../services/helloDb';
+
+/* GET programming languages. */
+router.get('/', async function(req, res, next) {
+  try {
+    res.json(await helloDb.getMultiple());
+  } catch (err) {
+    console.error(`Error while getting db info `, err.message);
+    next(err);
+  }
+});
+
+
+
+
 // import apikey from '../../auth/apikey';
 // import signup from './access/signup';
 // import login from './access/login';
@@ -10,7 +26,7 @@ import express from 'express';
 // import editor from './blog/editor';
 // import user from './profile/user';
 
-const router = express.Router();
+// const router = express.Router();
 
 /*-------------------------------------------------------------------------*/
 // Below all APIs are public APIs protected by api-key
