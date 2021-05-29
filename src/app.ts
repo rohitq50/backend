@@ -1,5 +1,4 @@
 import express from 'express'
-// import HelloWorld from './services/helloWorld'
 import routesV1 from './routes/v1'
 // import cors from 'cors';
 import config from "./config"
@@ -12,7 +11,7 @@ app.use(express.urlencoded({ limit: '10mb', extended: true, parameterLimit: 5000
 // TODO handle error
 async function startServer() {
 	app.listen(config.port, () =>
-		console.log(`Your server is ready on localhost:${config.port}`)
+		console.log(config.consoleColors.cyan, `Server is running on localhost:${config.port}`)
 	);
 }
 startServer();

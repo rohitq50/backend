@@ -1,20 +1,11 @@
 import mycon from '../models/mycon';
 import helper from '../subscribers/helper';
-import config from '../config/index';
 
-async function getMultiple(page = 1){
-  	const offset = helper.getOffset(page, config.listPerPage);
-  	const rows = await mycon.query(
-    	`SHOW databases;`
-  	);
-	//TODO check rows value
+async function getMultiple(){
+	let sql = `SHOW databases;`
+  	const rows = await mycon.getMySqlResults(sql);
   	const data = helper.emptyOrRows(rows);
-  	const meta = {page};
-
-  	return {
-    	data,
-		meta
-  	}
+  	return data
 }
 
 export default {
