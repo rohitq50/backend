@@ -1,18 +1,17 @@
-// import Query from "mysql/typings/mysql/lib/protocol/sequences/Query";
+// NOTE: place here the logic functions
 
 function getOffset(currentPage: number = 1, listPerPage: number) {
 	return (currentPage - 1) * listPerPage;
-  }
+}
 
-  //TODO data type not correct
-  function emptyOrRows(rows: any) {
+function emptyOrRows(rows: any) {
 	if (!rows) {
-	  return [];
+		return [];
 	}
 	return rows;
-  }
+}
 
-  export default {
+export default {
 	getOffset,
 	emptyOrRows
-  }
+}
