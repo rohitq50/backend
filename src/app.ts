@@ -1,5 +1,6 @@
 import express from 'express'
-import routesV1 from './routes/v1'
+import userV1 from './routes/v1/user'
+import authV1 from './routes/v1/auth'
 // import cors from 'cors';
 import config from "./config"
 const app = express()
@@ -15,4 +16,5 @@ async function startServer() {
 	);
 }
 startServer();
-app.use('/v1', routesV1);
+app.use('/api/v1/user', userV1);
+app.use('/api/v1/auth', authV1);
