@@ -1,20 +1,111 @@
-https://softwareontheroad.com/ideal-nodejs-project-structure/
+# 🚀 Node.js Express Starter (JWT + MySQL)
 
+A **beginner-friendly Node.js project** built from scratch using **Express.js**.  
+This project demonstrates **User CRUD operations**, **JWT-based authentication**, and **MySQL database integration**.
 
-restAPIs
-https://blog.logrocket.com/node-js-express-js-mysql-rest-api-example/
+It is intended as a **learning reference** for developers who want to get started with **Node.js backend development** using real-world patterns.
 
+---
 
-https://www.youtube.com/watch?v=zRo2tvQpus8
+## 🎯 What You Will Learn
+- How to structure a Node.js Express project
+- How to build REST APIs
+- User **Create / Read / Update / Delete (CRUD)**
+- Authentication using **JWT**
+- Protecting routes with middleware
+- Connecting Node.js with **MySQL**
+- Environment variable management
+- Clean and readable backend code
 
-$ npm cmds
-$ npm run dev
-$ npm run build
-$ npm run start
+---
 
-if wanna kill find and kill port in windows
-> netstat -ano | findstr :3306
-> taskkill /PID 6204 /F
+## 🚀 Features
+- ✅ User registration & login
+- 🔐 JWT authentication
+- 🧑‍💻 Protected APIs
+- 🗄️ MySQL database integration
+- 🧱 Clean project structure
+- 🧪 Easy-to-test APIs
+- 📘 Beginner-friendly code
 
-start mysql server in linux
-$ sudo service mysql start
+---
+
+## 🛠️ Tech Stack
+- **Node.js**
+- **Express.js**
+- **MySQL**
+- **JWT (jsonwebtoken)**
+- dotenv
+
+---
+
+## 🧱 Project Structure
+
+src/
+├── app.js # App entry point
+├── routes/
+│ ├── auth.routes.js # Login & register routes
+│ └── user.routes.js # User CRUD routes
+├── controllers/
+│ ├── auth.controller.js
+│ └── user.controller.js
+├── middleware/
+│ └── jwtAuth.js # JWT validation middleware
+├── db/
+│ └── mysql.js # MySQL connection
+├── services/
+│ └── user.service.js # DB logic
+└── utils/
+└── response.js # Common response helper
+
+yaml
+Copy code
+
+---
+
+## 📦 Installation
+
+### 1️⃣ Clone the repository
+```bash
+git clone <your-repo-url>
+cd nodejs-express-jwt-mysql
+2️⃣ Install dependencies
+bash
+Copy code
+npm install
+⚙️ Environment Variables
+Create a .env file in the root directory:
+
+env
+Copy code
+PORT=3000
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=password
+DB_NAME=test_db
+
+JWT_SECRET=my_super_secret_key
+JWT_EXPIRES_IN=1h
+🗄️ MySQL Table (Example)
+sql
+Copy code
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    phone VARCHAR(50) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    salt VARCHAR(255) NOT NULL,
+    address VARCHAR(255),
+    city VARCHAR(50),
+    dob DATE,
+    gender VARCHAR(10) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+▶️ Running the Application
+bash
+Copy code
+npm run dev
