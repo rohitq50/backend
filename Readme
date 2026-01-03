@@ -1,3 +1,4 @@
+```
 # 🚀 Node.js Express Starter (JWT + MySQL)
 
 A **beginner-friendly Node.js project** built from scratch using **Express.js**.  
@@ -58,8 +59,7 @@ src/
 └── utils/
 └── response.js # Common response helper
 
-yaml
-Copy code
+```
 
 ---
 
@@ -69,10 +69,13 @@ Copy code
 ```bash
 git clone <your-repo-url>
 cd nodejs-express-jwt-mysql
+
 2️⃣ Install dependencies
 bash
 Copy code
 npm install
+
+
 ⚙️ Environment Variables
 Create a .env file in the root directory:
 
@@ -85,8 +88,6 @@ DB_USER=root
 DB_PASSWORD=password
 DB_NAME=test_db
 
-JWT_SECRET=my_super_secret_key
-JWT_EXPIRES_IN=1h
 🗄️ MySQL Table (Example)
 sql
 Copy code
@@ -105,7 +106,9 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
 ▶️ Running the Application
 bash
 Copy code
 npm run dev
+```
