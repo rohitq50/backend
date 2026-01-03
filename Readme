@@ -1,4 +1,4 @@
-md```
+```md
 # 🚀 Node.js Express Starter (JWT + MySQL)
 
 A **beginner-friendly Node.js project** built from scratch using **Express.js**.  
@@ -42,24 +42,26 @@ It is intended as a **learning reference** for developers who want to get starte
 
 ## 🧱 Project Structure
 
-src/
-├── app.js # App entry point
-├── routes/
-│ ├── auth.routes.js # Login & register routes
-│ └── user.routes.js # User CRUD routes
-├── controllers/
-│ ├── auth.controller.js
-│ └── user.controller.js
-├── middleware/
-│ └── jwtAuth.js # JWT validation middleware
-├── db/
-│ └── mysql.js # MySQL connection
-├── services/
-│ └── user.service.js # DB logic
-└── utils/
-└── response.js # Common response helper
-
 ```
+
+src/
+├── app.js                 # App entry point
+├── routes/
+│   ├── auth.routes.js     # Login & register routes
+│   └── user.routes.js     # User CRUD routes
+├── controllers/
+│   ├── auth.controller.js
+│   └── user.controller.js
+├── middleware/
+│   └── jwtAuth.js         # JWT validation middleware
+├── db/
+│   └── mysql.js           # MySQL connection
+├── services/
+│   └── user.service.js    # DB logic
+└── utils/
+└── response.js        # Common response helper
+
+````
 
 ---
 
@@ -69,28 +71,36 @@ src/
 ```bash
 git clone <your-repo-url>
 cd nodejs-express-jwt-mysql
+````
 
-2️⃣ Install dependencies
-bash
-Copy code
+---
+
+### 2️⃣ Install dependencies
+
+```bash
 npm install
+```
 
+---
 
-⚙️ Environment Variables
-Create a .env file in the root directory:
+## ⚙️ Environment Variables
 
-env
-Copy code
+Create a `.env` file in the root directory:
+
+```env
 PORT=3000
 
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=password
 DB_NAME=test_db
+```
 
-🗄️ MySQL Table (Example)
-sql
-Copy code
+---
+
+## 🗄️ MySQL Table (Example)
+
+```sql
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
@@ -104,12 +114,45 @@ CREATE TABLE users (
     dob DATE,
     gender VARCHAR(10) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+        ON UPDATE CURRENT_TIMESTAMP
 );
+```
 
-▶️ Running the Application
-bash
-Copy code
+---
+
+## ▶️ Running the Application
+
+```bash
 npm run dev
 ```
 
+Server will start on:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📌 Notes
+
+* Ensure MySQL is running before starting the app
+* Update database credentials correctly in `.env`
+* JWT-protected routes require `Authorization: Bearer <token>`
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## ⭐ Final Note
+
+This project is created **for beginners** to understand how a real-world Node.js backend works.
+
+Happy coding! 🚀
+
+```
