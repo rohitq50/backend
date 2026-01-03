@@ -1,4 +1,4 @@
-```
+md```
 # 🚀 Node.js Express Starter (JWT + MySQL)
 
 A **beginner-friendly Node.js project** built from scratch using **Express.js**.  
@@ -112,3 +112,4 @@ bash
 Copy code
 npm run dev
 ```
+
